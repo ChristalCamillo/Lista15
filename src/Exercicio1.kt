@@ -8,14 +8,13 @@
 fun main() {
     val x = readln().toInt()
     val y = readln().toInt()
-    soma(x,y)
-    mostrarSoma(soma)
+    mostrarSoma(somaIntervalo(x,y))
 }
 
 
-fun soma (y: Int, x: Int): Int{
+fun somaIntervalo (y: Int, x: Int): Int{
     var soma = 0
-    for(intervalo in x <=..<=y){
+    for(intervalo in x ..y){
         if(intervalo % 13 != 0){
             soma+= intervalo
         }
